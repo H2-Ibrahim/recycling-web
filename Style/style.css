@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", monospace;
+    transition: all ease 1.5s;
+}
+
+::selection {
+    background-color: #212529;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
+    z-index: 1;
+}
+
+.dark {
+    color: #212529;
+}
+
+.light {
+    color: #f8f9fa;
+}
+
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9cc026;
+    border-radius: 10px;
+    transition: all ease 2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #83a11f;
+}
+
+/* Start Navbar */
+
+.navbar {
+    height: min-content;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000000100;
+    background-color: #fff;
+}
+
+.logo {
+    margin-left: 4%;
+    color: grey;
+}
+
+.logo svg {
+    height: 50px;
+    width: 50px;
+    color: #9cc026;
+    fill: #9cc026;
+}
+
+.list {
+    margin-left: 22%;
+}
+
+.list li {
+    margin-right: 10%;
+    transition: all ease 2s;
+}
+
+
+.list li .home {
+    color: #9cc026;
+}
+
+
+/* End Navbar */
+
+/* Start Services */
+.services {
+    background-image: url(img/Serv.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.services .text {
+    padding-top: 15%;
+}
+
+.services .text h1 {
+    font-size: 90px;
+}
+
+.services .text p {
+    width: 45%;
+    justify-self: center;
+}
+
+.services .text .our {
+    border-radius: 30px;
+    padding: 20px 40px;
+    font-size: 14px;
+    border: none;
+    background-color: #9cc026;
+}
+
+.services .text .our:hover {
+    background-color: transparent;
+    border: 2px solid #9cc026;
+}
+
+/* End Services */
+
+/* Start About */
+.about {
+    align-items: center;
+    text-align: center;
+}
+
+.about svg {
+    height: 50px;
+    width: 50px;
+    margin-top: 4rem;
+    fill: #9cc026;
+}
+
+.about .text .welcome {
+    font-size: 30px;
+}
+
+.about .text .info {
+    width: 55%;
+    justify-self: center;
+}
+
+.about .card {
+    border: 2px solid grey;
+    width: 30%;
+    height: 300px;
+    align-items: center;
+    margin: 2%;
+}
+
+.about .cards {
+    display: flex;
+    margin-top: 10%;
+}
+
+.about p {
+    width: 89%;
+}
+
+.about .card h3 {
+    padding-top: 35px;
+    transition: all ease 1s;
+}
+
+.about .card h3:hover {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.about .card i {
+    font-size: 40px;
+    color: #9cc026;
+    margin-top: 30px;
+
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-timing-function: ease-out;
+}
+
+.about i:hover {
+    animation-name: hvr-icon-pulse-grow;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes hvr-icon-pulse-grow {
+    to {
+        transform: scale(1.3);
+    }
+}
+
+
+
+/* End About */
+
+/* Start Pick */
+.pickup {
+    position: relative;
+    background: url("img/pick.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.pickup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.pickup .container {
+    position: relative;
+    z-index: 2;
+}
+
+.pickup svg {
+    height: 50px;
+    width: 50px;
+    fill: #9cc026;
+}
+
+.pickup h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 4%;
+}
+
+.pickup p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.pickup .input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #333;
+    color: #b4e900;
+}
+
+.pickup .form-control {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.pickup .form-control:focus {
+    border-color: #b4e900;
+    box-shadow: 0 0 0 0.2rem rgba(180, 233, 0, 0.25);
+}
+
+.pickup .btn-order {
+    background-color: #b4e900;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 18px;
+}
+
+.pickup .btn-order:hover {
+    background-color: #a3d300;
+}
+
+.pickup textarea.form-control {
+    resize: none;
+}
+
+/* End Pick */
+
+/* Start Customers */
+.customer {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.customer svg {
+    height: 50px;
+    width: 50px;
+    fill: #9cc026;
+}
+
+.customer h2 {
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.customer p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+.carousel-caption {
+    background: none;
+    padding: 0;
+    color: #333;
+}
+
+.quote-icon {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+.author-info {
+    margin-top: 20px;
+}
+
+.author-info h5 {
+    margin: 0;
+    font-weight: 600;
+    color: #222;
+}
+
+.author-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.client-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    margin-bottom: 250px;
+}
+
+/* End Customers */
+
+
+/* Start Missions */
+.missions {
+    height: 500px;
+    display: flex;
+}
+
+.missions .img {
+    height: 100%;
+    display: flex;
+    width: 50%;
+}
+
+.missions .img img {
+    height: 100%;
+}
+
+.missions .text {
+    width: 50%;
+}
+
+.missions svg {
+    height: 35px;
+    width: 35px;
+    fill: #9cc026;
+    margin-top: 12%;
+}
+
+.missions .task {
+    background-color: #9cc026;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-top: 4%;
+    font-size: 18px;
+    width: 90%;
+    transition: all ease 1s;
+}
+
+.missions .task:hover {
+    background-color: #758f1f;
+    cursor: pointer;
+}
+
+.missions .task p {
+    margin-top: 12px;
+}
+
+/* End Missions */
+
+/* Start Contact */
+.contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+
+.contact h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 4%;
+    color: #212529;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ccc;
+
+}
+
+.contact .input-group-text {
+    background-color: #212529;
+    border: 1px solid #fff;
+    color: #b4e900;
+}
+
+.contact .form-control {
+    background-color: #212529;
+    color: #999;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+.contact .form-control:focus {
+    border-color: #b4e900;
+    box-shadow: 0 0 0 0.2rem rgba(180, 233, 0, 0.25);
+}
+
+.contact .btn-order {
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 14px 10px;
+    font-size: 18px;
+}
+
+.contact .btn-order:hover {
+    background-color: #fff;
+    color: #212529;
+}
+
+.contact textarea.form-control {
+    resize: none;
+}
+
+/* End Contact */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 90px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #555;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width:515px) {
+    .services .text h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-left: 15px;
+    }
+
+    .services .text p {
+        width: 80%;
+    }
+
+    .about .cards {
+        display: block;
+    }
+
+    .about .card {
+        width: 70%;
+        justify-self: center;
+    }
+
+    .about .card p {
+        margin-left: 10px;
+    }
+
+    .customer .client-img {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width:718px) {
+    .services .text h1 {
+        font-size: 60px;
+        margin-top: 100px;
+        margin-left: 15px;
+    }
+
+    .services .text p {
+        width: 50%;
+    }
+
+    .about .cards {
+        display: block;
+    }
+
+    .about .card {
+        width: 70%;
+        justify-self: center;
+    }
+
+    .about .card p {
+        margin-left: 30px;
+    }
+
+    .customer .client-img {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:960px) {
+
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
